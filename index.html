@@ -1,186 +1,341 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/icon.ico" />
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/png" href="./assets/header.png">
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-    />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <header>
-      <div class="header">
-        <h1>My Portfolio</h1>
-        <div class="nav">
-          <nav class="navigation">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <button id="darkModeToggle">
-            <a href="#"
-              ><img
-                id="modeIcon"
-                src="Images/dark.svg"
-                alt="Dark Mode Icon"
+    <nav id="desktop-nav">
+      <div class="logo">My Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <!-- <li><a href="#projects">Projects</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Shema Ivan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section-pic-container">
+        <img src="./assets/portfolio.png" alt="profile-pic" />
+      </div>
+      <div class="section_text">
+        <p class="section_text_p1">Hello, I'm</p>
+        <h1 class="title">Shema Ivan</h1>
+        <p class="section_text_p2">Software Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('https://docs.google.com/document/d/1ayYNoIMEN6wddtPhHB7sopY87ukESby-6KX1G8bdX2E/edit')"
+          >
+            Download CV
+          </button>
+          <button
+            class="btn btn-color-1"
+            onclick="location.href = './#contact'"
+          >
+            Contact Info
+          </button>
+        </div>
+        <div id="social-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="my linkedin profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/shema-ivan-751818275/')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="my linkedin profile"
+            class="icon"
+            onclick="window.open('https://github.com/nkubana0')"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section_text_p1">Get to know more</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-container">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
                 class="icon"
-            /></a>
+              />
+              <h3>Experience</h3>
+              <p>
+                2+ years <br />
+                Full-stack development
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                B.Sc Software Engineering <br />
+                African Leasdership University
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hello! I'm Shema Ivan, a passionate software engineering student
+              currently pursuing a Bachelor's degree in Software Engineering.
+              With a strong foundation in web development and proficiency in
+              languages such as HTML, CSS, Python and JavaScript with
+              knowlededge in a few frameworks, I am driven by a deep curiosity
+              for exploring the world of software engineering.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <p class="section_text_p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-container">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Front-end Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Javascript</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Back-end Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience Icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <p class="section_text_p1">Browswe My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container color-container">
+        <div class="about-container">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location"
+                href="https://github.com/nkubana0?tab=repositories"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location"
+                href="https://github.com/nkubana0?tab=repositories"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project-2.png"
+            alt="project 2"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Project Two</h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location"
+            href="https://github.com/nkubana0?tab=repositories"
+          >
+            Github
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location"
+            href="https://github.com/nkubana0?tab=repositories"
+          >
+            Live Demo
           </button>
         </div>
       </div>
-    </header>
-    <main>
-      <section id="Home">
-        <div class="container">
-          <div class="Intro">
-            <p>Hello there!</p>
-            <p>
-              I'm Shema Ivan,a passionate Software Engineer with a focus on
-              leveraging AI technology to address community challenges.I'm
-              dedicated to bridging the gap between technology and society.My
-              mission is to harness software engineering skills to create
-              solutions that benefit my community, advocating for the advantages
-              of AI and fostering a deeper understanding among the public. With
-              a commitment to leadership and innovation, I aspire to make
-              impactful contributions within any establishment I engage with.
-            </p>
-            <h4>Lets Connect!</h4>
-            <div class="social-media">
-              <img src="Images/ig.svg" />
-              <a href="#"><p>@nkubana_</p></a>
-            </div>
-            <div class="social-media">
-              <img src="Images/twitter.svg" />
-              <a href="#"><p>@nkubana0</p></a>
-            </div>
-            <div class="social-media">
-              <img src="Images/linked.svg" />
-              <a href="#"><p>Shema Ivan</p></a>
-            </div>
-            <div class="social-media">
-              <img src="Images/gmail.svg" />
-              <a href="#"><p>shemaivan27@gmail.com</p></a>
-            </div>
-            <div class="social-media">
-              <img src="Images/git.svg" />
-              <a href="#"><p>@nkubana0</p></a>
-            </div>
-          </div>
-          <div class="picture">
-            <img src="Images/portfolio.png" />
-          </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project-3.png"
+            alt="project 3"
+            class="project-img"
+          />
         </div>
-      </section>
-      <section id="About">
-        <div class="about">
-          <h2>ABOUT</h2>
-          <div class="about_section_container">
-            <div class="about_section">
-              <h4>About Shema Ivan</h4>
-              <p>
-                Hello! I'm Shema Ivan, a passionate software engineering student
-                currently pursuing a Bachelor's degree in Software Engineering.
-                With a strong foundation in web development and proficiency in
-                languages such as HTML, CSS, and JavaScript, I am driven by a
-                deep curiosity for exploring the world of software engineering.
-              </p>
-            </div>
-            <div class="about_section">
-              <h4>Education and Skills</h4>
-              <p>
-                Currently in my second year of university, I am actively
-                expanding my knowledge and honing my skills in various
-                programming languages and technologies. Alongside web
-                development, I have experience with languages such as Python,
-                Shell scripting, and TypeScript, allowing me to tackle diverse
-                challenges and projects with confidence.
-              </p>
-            </div>
-          </div>
-          <div class="about_section_container_2">
-            <div class="about_section">
-              <h4>Passion and Projects</h4>
-              <p>
-                I am deeply passionate about leveraging technology to solve
-                real-world problems and enhance user experiences. Throughout my
-                academic journey, I've had the opportunity to work on a variety
-                of projects, ranging from responsive web applications to
-                automation scripts and beyond. These experiences have not only
-                strengthened my technical abilities but have also fueled my
-                desire to continue learning and growing as a software engineer.
-              </p>
-            </div>
-            <div class="about_section">
-              <h4>Future Endeavors</h4>
-              <p>
-                As I continue my studies and embark on my professional journey,
-                I am eager to further explore the intersection of technology and
-                society, seeking opportunities to make meaningful contributions
-                to the field of software engineering. With a focus on continuous
-                learning, innovation, and collaboration, I aspire to play a role
-                in shaping the future of technology and making a positive impact
-                on the world around me.
-              </p>
-            </div>
-          </div>
+        <h2 class="experience-sub-title project-title">Project Three</h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location"
+            href="https://github.com/nkubana0?tab=repositories"
+          >
+            Github
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location"
+            href="https://github.com/nkubana0?tab=repositories"
+          >
+            Live Demo
+          </button>
         </div>
-      </section>
-      <section id="Projects">
-        <h2>PROJECTS</h2>
-        <div class="projects_container">
-          <div class="right-side">
-            <h3>Shift Africa: Revolutionizing Online Shopping in Rwanda</h3>
-            <p>
-              Shift Africa is a groundbreaking shopping website designed to
-              revolutionize the way Rwandans shop for clothes and fashion items.
-              With a user-friendly interface and a vast selection of trendy
-              products, Shift Africa offers customers a seamless and convenient
-              shopping experience from the comfort of their homes.
-            </p>
-            <h3>My Role</h3>
-            <p>
-              As the lead developer of Shift Africa, I have been instrumental in
-              every aspect of the project, from conceptualization to
-              implementation. My responsibilities have included designing and
-              developing the website, implementing key features, ensuring data
-              security, and optimizing performance for a smooth user experience.
-            </p>
-          </div>
-          <div class="left-side">
-            <h3>Key Features</h3>
-            <p>
-              Wide Range of Products: Shift Africa boasts an extensive
-              collection of clothing and fashion items, catering to diverse
-              tastes and preferences.
-            </p>
-            <p>
-              Intuitive User Interface: Our website features an intuitive and
-              easy-to-navigate interface, making it effortless for users to
-              browse, search, and purchase their favorite products.
-            </p>
-            <p>
-              Responsive Design: Whether accessing the website on a desktop,
-              laptop, or mobile device, Shift Africa offers a responsive design
-              that ensures optimal viewing and functionality across all screen
-              sizes.
-            </p>
-            <p>
-              Secure Payment Gateway: We prioritize the security of our
-              customers' transactions and provide a secure payment gateway for
-              seamless online payments.
-            </p>
-            Personalized Recommendations: Through advanced algorithms, Shift
-            Africa provides personalized product recommendations based on users'
-            browsing history and preferences, enhancing the shopping experience.
-          </div>
+      </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section_text_p1">Get in touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="email icon" class="email-icon">
+          <p><a href="mailto:shemaivan27@gmail.com">shemaivan27@gmail.com</a></p>
         </div>
-      </section>
-      <section id="Contact"></section>
-    </main>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="Linked In" class="icon contact-icon">
+          <p><a href="https://www.linkedin.com/in/shema-ivan-751818275/">linkedin</a></p>
+        </div>
+        </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <!-- <li><a href="#projects">Projects</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Shema Ivan. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
